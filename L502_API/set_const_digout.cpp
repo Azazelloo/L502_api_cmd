@@ -1,4 +1,4 @@
-#include "Header.h"
+﻿#include "Header.h"
 
 void set_const_digout(t_l502_hnd create, uint32_t state)
 {

@@ -1,4 +1,4 @@
-#include "Header.h"
+ï»¿#include "Header.h"
 
 bool connect_L502(t_l502_hnd* create, char* num_l502)
 {
@@ -8,7 +8,7 @@ bool connect_L502(t_l502_hnd* create, char* num_l502)
 
 	if (is_number(num_l502))
 	{
-		//êîíâåğòèğóåì ñòğîêîâûé àğãóìåíò â int
+		//ĞºĞ¾Ğ½Ğ²ĞµÑ€Ñ‚Ğ¸Ñ€ÑƒĞµĞ¼ ÑÑ‚Ñ€Ğ¾ĞºĞ¾Ğ²Ñ‹Ğ¹ Ğ°Ñ€Ğ³ÑƒĞ¼ĞµĞ½Ñ‚ Ğ² int
 		std::stringstream num_l502_convert(num_l502);
 		int num_l502_int;
 		num_l502_convert >> num_l502_int;

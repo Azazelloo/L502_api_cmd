@@ -1,4 +1,4 @@
-#include "Header.h"
+ï»¿#include "Header.h"
 
 int main(int argc, char* argv[])
 	{
@@ -8,7 +8,7 @@ int main(int argc, char* argv[])
 
 		if (strcmp(argv[1], "-help") == 0 || strcmp(argv[1], "-h") == 0)
 		{
-			std::cout << "*.exe int number_device(íîìåð ïëàòû) -const(ïîñòîÿííûå óðîâíè)/-impulse(èìïóëüñíûé ðåæèì) int state(åñëè âûáðàí ðåæèì -const) -single/-repeat(åñëè âûáðàí ðåæèì -impulse)" << std::endl;
+			std::cout << "*.exe int number_device(Ð½Ð¾Ð¼ÐµÑ€ Ð¿Ð»Ð°Ñ‚Ñ‹) -const(Ð¿Ð¾ÑÑ‚Ð¾ÑÐ½Ð½Ñ‹Ðµ ÑƒÑ€Ð¾Ð²Ð½Ð¸)/-impulse(Ð¸Ð¼Ð¿ÑƒÐ»ÑŒÑÐ½Ñ‹Ð¹ Ñ€ÐµÐ¶Ð¸Ð¼) int state(ÐµÑÐ»Ð¸ Ð²Ñ‹Ð±Ñ€Ð°Ð½ Ñ€ÐµÐ¶Ð¸Ð¼ -const) -single/-repeat(ÐµÑÐ»Ð¸ Ð²Ñ‹Ð±Ñ€Ð°Ð½ Ñ€ÐµÐ¶Ð¸Ð¼ -impulse)" << std::endl;
 			system("pause");
 		}
 		else
@@ -19,7 +19,7 @@ int main(int argc, char* argv[])
 				}
 			else
 			{
-				if (connect_L502(&create, argv[1]))//ïðîâåðÿåì óñòàíîâêó ñîåäèíåíèÿ
+				if (connect_L502(&create, argv[1]))//Ð¿Ñ€Ð¾Ð²ÐµÑ€ÑÐµÐ¼ ÑƒÑÑ‚Ð°Ð½Ð¾Ð²ÐºÑƒ ÑÐ¾ÐµÐ´Ð¸Ð½ÐµÐ½Ð¸Ñ
 				{
 					if (strcmp(argv[2], "-const") == 0 || strcmp(argv[2], "-impulse") == 0)
 					{
@@ -32,7 +32,7 @@ int main(int argc, char* argv[])
 								state_const_convert >> state_const_int;
 								if (state_const_int>=0 && state_const_int<=65535)
 								{
-									set_const_digout(create, state_const_int); //ïîñòîÿííûå óðîâíè íà öèôðîâûõ âûõîäàõ
+									set_const_digout(create, state_const_int); //Ð¿Ð¾ÑÑ‚Ð¾ÑÐ½Ð½Ñ‹Ðµ ÑƒÑ€Ð¾Ð²Ð½Ð¸ Ð½Ð° Ñ†Ð¸Ñ„Ñ€Ð¾Ð²Ñ‹Ñ… Ð²Ñ‹Ñ…Ð¾Ð´Ð°Ñ…
 									L502_Free(create);
 								}
 								else
@@ -51,7 +51,7 @@ int main(int argc, char* argv[])
 						{
 							if (strcmp(argv[3], "-single") == 0 || strcmp(argv[3], "-repeat") == 0)
 							{
-								set_impulse_digout(create, argv[3]); //èìïóëüñ
+								set_impulse_digout(create, argv[3]); //Ð¸Ð¼Ð¿ÑƒÐ»ÑŒÑ
 							}
 							else 
 							{

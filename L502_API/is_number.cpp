@@ -1,4 +1,4 @@
-#include "Header.h"
+﻿#include "Header.h"
 
 bool is_number(const char* str)
 {

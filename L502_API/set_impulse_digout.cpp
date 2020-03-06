@@ -1,4 +1,4 @@
-#include "Header.h"
+п»ї#include "Header.h"
 
 void set_impulse_digout(t_l502_hnd create, char* imp_mode)
 {
@@ -7,7 +7,7 @@ void set_impulse_digout(t_l502_hnd create, char* imp_mode)
 	int impulse_length = GetPrivateProfileInt("impulse_length", "length", -1, "../inc/set_impulse.ini");
 	if (impulse_length > 0)
 	{
-		uint32_t* impulse_array = new uint32_t[impulse_length]{};//выделяем память под массив импульса
+		uint32_t* impulse_array = new uint32_t[impulse_length]{};//РІС‹РґРµР»СЏРµРј РїР°РјСЏС‚СЊ РїРѕРґ РјР°СЃСЃРёРІ РёРјРїСѓР»СЊСЃР°
 		char str_i[8];
 		int state,period,delay;
 		for (int i = 1; i <= 16; i++)
@@ -27,7 +27,7 @@ void set_impulse_digout(t_l502_hnd create, char* imp_mode)
 
 		if (strcmp(imp_mode,"-repeat")==0)
 		{
-			//повторяющийся импульс
+			//РїРѕРІС‚РѕСЂСЏСЋС‰РёР№СЃСЏ РёРјРїСѓР»СЊСЃ
 			std::cout << "...Impulse repeating..." << std::endl;
 			L502_OutCycleLoadStart(create, impulse_length);
 			L502_Send(create, impulse_array, impulse_length, 10);
@@ -48,7 +48,7 @@ void set_impulse_digout(t_l502_hnd create, char* imp_mode)
 			L502_Send(create, impulse_array, impulse_length,10);
 			L502_StreamsStart(create);
 		}
-		//останавливаем импульс по нажатию клавиши
+		//РѕСЃС‚Р°РЅР°РІР»РёРІР°РµРј РёРјРїСѓР»СЊСЃ РїРѕ РЅР°Р¶Р°С‚РёСЋ РєР»Р°РІРёС€Рё
 		//system("pause");
 		//L502_StreamsStop(create);
 		//std::cout << "----Impulse stopped!"<<std::endl;

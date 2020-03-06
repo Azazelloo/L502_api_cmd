@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #define _CRT_SECURE_NO_WARNINGS
 #include "../inc/l502api.h"
 #include "../inc/e502api.h"
